@@ -14,7 +14,8 @@ const HeroBanner: React.FC = () => {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white leading-snug">
-            Hi, I'm a <span className="text-yellow-400">React Developer</span>
+            Hi, I&apos;m a{" "}
+            <span className="text-yellow-400">React Developer</span>
           </h2>
           <p className="text-base md:text-xl text-gray-200">
             I specialize in building scalable, fast, and user-friendly web

@@ -1,11 +1,9 @@
 "use client"; // For client-side rendering with framer-motion
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-} from "@radix-ui/react-navigation-menu";
+import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
 import { Menu, X } from "lucide-react"; // Optional icons for hamburger menu
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu toggle
@@ -19,7 +17,8 @@ const Header: React.FC = () => {
     <header className="w-full p-4 bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo or Name */}
-        <a href="/">
+
+        <Link href="/">
           <motion.h1
             className="text-3xl font-bold text-gray-800"
             initial={{ opacity: 0, y: -20 }}
@@ -28,7 +27,7 @@ const Header: React.FC = () => {
           >
             <span className="text-blue-500">My</span> Portfolio
           </motion.h1>
-        </a>
+        </Link>
 
         {/* Navigation Menu for Desktop */}
         <motion.div
